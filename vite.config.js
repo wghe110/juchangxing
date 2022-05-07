@@ -6,7 +6,7 @@ export default ({ mode }) => {
   console.log('env.VITE_BASEURL=', env.VITE_BASEURL)
 
   return defineConfig({
-    baseUrl: env.VITE_BASEURL,
+    base: env.VITE_BASEURL,
     resolve: {
       alias: {
         '/@': '/src',
