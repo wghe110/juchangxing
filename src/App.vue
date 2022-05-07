@@ -97,7 +97,7 @@ export default {
   font-size: 26px;
   font-weight: bolder;
   color: #000;
-  font-family: "sans-serif";
+  font-family: "微软雅黑";
   margin-bottom: 10px;
   border-top: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
