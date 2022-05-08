@@ -51,15 +51,17 @@ export default {
     };
   },
   created() {
-    clearInterval(this.timer);
-    this.timer = setInterval(this.formatDate, 1000);
+    cancelAnimationFrame(this.timer);
+    // this.timer = requestAnimationFrame(this.formatDate);
+    this.formatDate();
   },
   beforeDestroy() {
-    clearInterval(this.timer);
+    cancelAnimationFrame(this.timer);
   },
   methods: {
     formatDate() {
-      this.nowDate = format(new Date(), "yyyy/M/d HH:mm:ss");
+      this.nowDate = format(new Date(), "yyyy/M/d HH:mm:ss:SSS");
+      this.timer = requestAnimationFrame(this.formatDate);
     },
   },
 };
